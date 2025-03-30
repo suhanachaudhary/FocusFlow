@@ -11,6 +11,7 @@ import TextSummarize from './textSummarize/TextSummarize';
 
 import HabitDashboard from "./components/HabitDashboard";
 import "./pomodora/global.css";
+import FlashApp from "./FlashApp.jsx"
 
 import Navbar from "./components/Navbar";
 
@@ -20,7 +21,7 @@ import Section from "./pomodora/Section";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   return (
-    <Router>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
@@ -30,9 +31,10 @@ function App() {
         <Route path="/notes" element={<Note />} />
         <Route path="/pomodora" element={<Section setDarkMode={setDarkMode} darkMode={darkMode}/>} />
         <Route path="/text" element={<TextSummarize />} />
+        <Route path="/flashcard/*" element={<FlashApp />} />
       </Routes>
       <Footer/>
-    </Router>
+  </>
   );
 }
 

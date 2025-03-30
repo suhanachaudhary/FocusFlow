@@ -64,6 +64,7 @@ function Navbar() {
             <li><Link className="text-[#f23064] hover:text-gray-300" to="/notes">Notes</Link></li>
             <li><Link className="text-[#f23064] hover:text-gray-300" to="/pomodora">Pomodora</Link></li>
             <li><Link className="text-[#f23064] hover:text-gray-300" to="/text">Summary</Link></li>
+            <li><Link className="text-[#f23064] hover:text-gray-300" to="/flashcard">FlashCard</Link></li>
 
             {!isLoggedIn && (
               <>
